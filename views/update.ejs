@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            padding: 10px; 
+            margin: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <form action="/update" method="post" >
+        <input type="text" name="nome" placeholder="nome" value="<%=User.nome%>">
+        <input type="email" name="email" placeholder="email" value="<%=User.email%>">
+        <h3>ATIVO</h3>
+        <input type="radio" name="status" value="INATIVO">
+        <h3>INATIVO</h3>
+        <input type="radio" name="status" value="FORMADO">
+        <h3>FORMADO</h3>
+        <input type="radio" name="status" value="GRADUADO">
+        <h3>GRADUADO</h3>
+        <input type="date"  name="dataNasc" value="<%=User.dataNasc%>">
+        <input type="date" name="matricula" style="display: none;">
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

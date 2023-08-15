@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/create"><button>Criar Nova</button></a>
+    <div style="width: 100%; border: 5px solid black;"></div>
+    <%for (let i = 0; i < array.length; i++){%>
+        <h4>Nome: <%=array[i].nome%></h4>
+        <h4>Email: <%=array[i].email%></h4>
+        <a href="/delete/<%=array[i].matricula%>"><button>Deletar</button></a>
+        <a href="/update/<%=array[i].matricula%>"><button>Atualizar</button></a>
+        <div style="width: 100%; border: 5px solid black;"></div>
+    <%}%>
+    </body>
+</html>
